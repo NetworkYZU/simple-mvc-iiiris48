@@ -67,4 +67,15 @@ public class BankCustomer {
     public static BankCustomer getCustomer(String id){
         return db.get(id);
     }
-}
+
+    static class getCustomer extends BankCustomer {
+
+        public getCustomer(String id, String firstName, String lastName, double balance) {
+            super(id, firstName, lastName, balance);
+        }
+
+    }}
+       
+
+    
+
