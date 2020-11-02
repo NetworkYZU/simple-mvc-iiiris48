@@ -12,11 +12,11 @@ import java.util.Map;
  *
  * @author lendle
  */
-public class Student {
+public class ScoreStudent {
     private String id, name;
     private double score=-1;
 
-    public Student(String id, String name, double score) {
+    public ScoreStudent(String id, String name, double score) {
         this.id = id;
         this.name = name;
         this.score=score;
@@ -30,11 +30,11 @@ public class Student {
         this.id = id;
     }
 
-    public String getName() {
+    public String getname() {
         return name;
     }
 
-    public void setName(String name) {
+    public void setname(String name) {
         this.name = name;
     }
 
@@ -46,11 +46,21 @@ public class Student {
         this.score = score;
     }
     
-    private static Map<String, Student> db=new HashMap<>();
-    
+    private static Map<String, ScoreStudent> db=new HashMap<>();
     static{
-        db.put("id1", new Student("id1", "name1", 60));
-        db.put("id2", new Student("id2", "name2", 50));
-        db.put("id3", new Student("id3", "name3", 80));
+        db.put("id1", new ScoreStudent("id1", "name1", 60));
+        db.put("id2", new ScoreStudent("id2", "name2", 50));
+        db.put("id3", new ScoreStudent("id3", "name3", 80));
     }
-}
+    public static ScoreStudent getStudent(String id){
+        return db.get(id);
+    }
+
+    static class getStudent extends ScoreStudent {
+
+        public getStudent(String id, String name,  double score) {
+            super(id, name, score);
+        }
+
+    }}
+

@@ -8,8 +8,8 @@
         <title>JSP Page</title>
     </head>
     <body>
-        <form method="post" action="ShowBalance2">
-            Customer Id:<input type="text" name="id"/><br/>
+        <form method="post" action="Score">
+            Student Id:<input type="text" name="id"/><br/>
             <input type="submit"/>
         </form>
 
