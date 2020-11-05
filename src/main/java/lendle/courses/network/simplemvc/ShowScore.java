@@ -18,6 +18,7 @@ import javax.servlet.http.HttpServletResponse;
  * @author lendle
  */
 @WebServlet(name = "ShowScore", urlPatterns = {"/Score"})
+//記得大小寫對稱名字
 public class ShowScore extends HttpServlet {
 
     /**
